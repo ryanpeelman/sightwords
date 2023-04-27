@@ -11,20 +11,18 @@ export default function App(): JSX.Element {
     const nextIndex = wordIndex + 1;
     if (nextIndex < words.length) {
       setWordIndex(nextIndex);
+    } else {
+      setWordIndex(0);
     }
-    // else {
-    //   setWordIndex(0);
-    // }
   };
 
   const handlePrevWord = () => {
     const prevIndex = wordIndex - 1;
     if (prevIndex >= 0) {
       setWordIndex(prevIndex);
+    } else {
+      setWordIndex(words.length - 1);
     }
-    // else {
-    //   setWordIndex(words.length - 1);
-    // }
   };
 
   return (
