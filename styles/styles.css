@@ -22,6 +22,18 @@
   flex: 1;
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: #fff;
+}
+
+.wordsCarousel {
+  display: flex;
+  flex: 1;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   background-color: #fff;
 }
 
@@ -41,5 +53,6 @@
 .word {
   font-size: 48px;
   font-weight: bold;
-  margin: 20px;
+  text-align: center;
+  flex-grow: 1;
 }

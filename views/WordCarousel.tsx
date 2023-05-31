@@ -30,13 +30,13 @@ export default function WordCarousel(props: WordCarouselProps): JSX.Element {
   };
 
   return (
-    <View style={styles.container}>
+    <View style={styles.wordsCarousel}>
       <TouchableOpacity style={styles.button} onPress={handlePrevWord}>
-        <Text style={styles.buttonText}>Previous</Text>
+        <Text style={styles.buttonText}>&lt;&lt;</Text>
       </TouchableOpacity>
       <Text style={styles.word}>{words[wordIndex] ?? ''}</Text>
       <TouchableOpacity style={styles.button} onPress={handleNextWord}>
-        <Text style={styles.buttonText}>Next</Text>
+        <Text style={styles.buttonText}>&gt;&gt;</Text>
       </TouchableOpacity>
     </View>
   );
