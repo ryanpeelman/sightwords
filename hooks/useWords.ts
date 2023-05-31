@@ -6,11 +6,17 @@ function useWords(currentLetter: string, currentCount: number): string[] {
   useEffect(() => {
     async function fetchWords() {
       try {
-        const count = currentCount ?? 0;
-        const letter = currentLetter ?? '';
-        const response = await fetch(
-          `http://localhost:3000/words?letter=${letter}&count=${count}`,
-        );
+        const url = new URL('http://localhost:3000/words');
+
+        if (currentCount && currentCount > 0) {
+          url.searchParams.append('count', currentCount.toString());
+        }
+
+        if (currentLetter) {
+          url.searchParams.append('letter', currentLetter);
+        }
+
+        const response = await fetch(url.href);
         const data = await response.json();
         setWords(data);
       } catch (error) {
