@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
-import styles from '../styles/styles.css';
 import {Pages} from '../enums';
+import styles from '../styles/styles.css';
 
 type HeaderProps = {
   setCurrentPage: (page: Pages) => void;
